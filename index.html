@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reverse Shell Generator</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="background-animation"></div>
+  <div class="container">
+    <h1>Reverse Shell Generator</h1>
+    <div class="form">
+      <label>Shell Type</label>
+      <select id="shellType">
+        <option value="bash">Bash</option>
+        <option value="nc">Netcat</option>
+        <option value="python">Python</option>
+        <option value="php">PHP</option>
+      </select>
+
+      <label>IP Address</label>
+      <input type="text" id="ip" placeholder="e.g., 192.168.1.10" />
+
+      <label>Port</label>
+      <input type="text" id="port" placeholder="e.g., 4444" />
+
+      <button onclick="generateShell()">Generate</button>
+      <pre id="output"></pre>
+      <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
